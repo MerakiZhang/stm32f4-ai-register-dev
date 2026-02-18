@@ -11,6 +11,21 @@ CTestTestfile.cmake
 _deps
 CMakeUserPresets.json
 
+# CMake build dir (in-source presets use ./build)
+build/
+
+# Ninja
+.ninja_deps
+.ninja_log
+build.ninja
+
+# Firmware artifacts (if generated in project root)
+firmware
+firmware.elf
+firmware.bin
+firmware.hex
+firmware.map
+
 # CLion
 #  JetBrains specific template is maintained in a separate JetBrains.gitignore that can
 #  be found at https://github.com/github/gitignore/blob/main/Global/JetBrains.gitignore
