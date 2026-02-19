@@ -15,6 +15,8 @@ set(LD_SCRIPT  linker/STM32F407ZGTX_FLASH.ld)
 file(GLOB_RECURSE APP_SOURCES CONFIGURE_DEPENDS
      "${CMAKE_SOURCE_DIR}/src/*.c")
 
+## LCD参考代码目录已移除（历史遗留），无需再做排除。
+
 add_executable(${FW_TARGET}.elf
     ${STARTUP_ASM}
     ${SYSTEM_SRC}
