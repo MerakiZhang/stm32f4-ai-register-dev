@@ -1,6 +1,8 @@
 #include "clock/clock.h"
 #include "delay/delay.h"
 
+#include "timer/basic_timer.h"
+
 #include "led/led.h"
 #include "beep/beep.h"
 #include "key/key.h"
@@ -20,6 +22,9 @@ int main(void)
 
     /* 2) SysTick 1ms 时基（必须在主频最终确定后配置） */
     delay_init();
+
+    /* 2.1) TIM6 基本定时器（1us tick）用于 us/ms 阻塞延时（独立模块，不替换 delay/） */
+    basic_timer_init();
 
     /* 3) 外设初始化 */
     led_init();
